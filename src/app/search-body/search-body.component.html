@@ -1,0 +1,20 @@
+<nav>
+  <form (ngSubmit)='onSubmit(typeTerm.value, searchTerm.value)'>
+    <h1>Explore the Starwars Universe</h1>
+    <select #typeTerm>
+      <option placeholder='select option'></option>
+      <option name='People' value='people'>People</option>
+      <option name='Films' value='films'>Films</option>
+      <option name='Starships' value='starships'>Starships</option>
+    </select><br />
+    <label for='search'>Search:</label><br />
+    <input #searchTerm type='text' placeholder="enter search term"><br />
+    <button type='submit'>Enter</button>
+  </form>
+</nav>
+
+<div class='results' *ngIf='results.length !== 0 ; else noBook'>
+  <ul>
+    <app-results *ngFor='let result of results' [result]='result' [term]='term'></app-results>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+.back{
+    background-image: url('../assets/edgeofspace.jpg');
+    background-size: cover;
+    background-repeat: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
